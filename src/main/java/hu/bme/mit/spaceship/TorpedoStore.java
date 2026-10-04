@@ -27,7 +27,7 @@ public class TorpedoStore {
       }
     }
   }
-  private Random generator = new Random();
+  private Random generator = new Random(); // shared random generator to avoid creating new instances repeatedly
   public boolean fire(int numberOfTorpedos){
     if(numberOfTorpedos < 1 || numberOfTorpedos > this.torpedoCount){
       throw new IllegalArgumentException("numberOfTorpedos");
